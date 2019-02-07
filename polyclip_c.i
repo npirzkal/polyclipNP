@@ -15,7 +15,7 @@ import_array();
 %apply (int DIM1,int* IN_ARRAY1){(int len_l, int *l),(int len_r, int *r),(int len_b, int *b),(int len_t, int *t)}
 %apply (int DIM1,float* IN_ARRAY1){(int len_px, float *px)}
 %apply (int DIM1,float* IN_ARRAY1){(int len_py, float *py)}
-%apply (int DIM1,int* IN_ARRAY1){(int len_poly_inds, int *poly_inds)}
+%apply (int DIM1,int* INPLACE_ARRAY1){(int len_poly_inds, int *poly_inds)}
 %apply (int DIM1,int* INPLACE_ARRAY1){(int len_x, int *x)}
 %apply (int DIM1,int* INPLACE_ARRAY1){(int len_y, int *y)}
 %apply (int DIM1,int* INPLACE_ARRAY1){(int len_nclip_poly, int *nclip_poly)}

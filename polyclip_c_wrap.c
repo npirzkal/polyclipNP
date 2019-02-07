@@ -3698,7 +3698,7 @@ SWIGINTERN PyObject *_wrap_polyclip_multi4(PyObject *SWIGUNUSEDPARM(self), PyObj
   int val13 ;
   int ecode13 = 0 ;
   PyArrayObject *array14 = NULL ;
-  int is_new_object14 = 0 ;
+  int i14 = 0 ;
   PyArrayObject *array16 = NULL ;
   int i16 = 0 ;
   PyArrayObject *array18 = NULL ;
@@ -3802,15 +3802,11 @@ SWIGINTERN PyObject *_wrap_polyclip_multi4(PyObject *SWIGUNUSEDPARM(self), PyObj
   } 
   arg13 = (int)(val13);
   {
-    npy_intp size[1] = {
-      -1
-    };
-    array14 = obj_to_array_contiguous_allow_conversion(obj7,
-      NPY_INT,
-      &is_new_object14);
-    if (!array14 || !require_dimensions(array14, 1) ||
-      !require_size(array14, size, 1)) SWIG_fail;
-    arg14 = (int) array_size(array14,0);
+    array14 = obj_to_array_no_conversion(obj7, NPY_INT);
+    if (!array14 || !require_dimensions(array14,1) || !require_contiguous(array14)
+      || !require_native(array14)) SWIG_fail;
+    arg14 = 1;
+    for (i14=0; i14 < array_numdims(array14); ++i14) arg14 *= array_size(array14,i14);
     arg15 = (int*) array_data(array14);
   }
   {
@@ -3891,12 +3887,6 @@ SWIGINTERN PyObject *_wrap_polyclip_multi4(PyObject *SWIGUNUSEDPARM(self), PyObj
       Py_DECREF(array11); 
     }
   }
-  {
-    if (is_new_object14 && array14)
-    {
-      Py_DECREF(array14); 
-    }
-  }
   return resultobj;
 fail:
   {
@@ -3933,12 +3923,6 @@ fail:
     if (is_new_object11 && array11)
     {
       Py_DECREF(array11); 
-    }
-  }
-  {
-    if (is_new_object14 && array14)
-    {
-      Py_DECREF(array14); 
     }
   }
   return NULL;
