@@ -12,7 +12,6 @@ python setup.py install
 import numpy as np
 import polyclip
 
-# Input polygon edges
 px=np.array([[3.4,3.4,4.5,4.5],[3.5,3.5,5.5,5.5]]).astype(np.float32)
 py=np.array([[1.4,2.0,2.0,1.4],[3.5,4.3,4.3,3.5]]).astype(np.float32)
     
@@ -28,7 +27,7 @@ npx = len(px)
 npol =  len(polyinds)
 
 nx = 10
-# Output arrays
+
 areas = np.zeros(nx,np.float32)
 index = np.zeros(nx,np.int32)
 nclip_poly = np.zeros(nx,np.int32)
