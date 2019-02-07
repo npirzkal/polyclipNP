@@ -28,7 +28,7 @@ npx = len(px)
 npol =  len(polyinds)
 
 nx = 10
-# Outpout arrays
+# Output arrays
 areas = np.zeros(nx,np.float32)
 index = np.zeros(nx,np.int32)
 nclip_poly = np.zeros(nx,np.int32)
