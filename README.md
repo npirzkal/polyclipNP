@@ -3,12 +3,11 @@
 This is a small SWIG wrapper around the function polyclip_multi4() of J.D. Smith polyclip C code.
 
 # Installing: #
-'''
+```
 python setup.py install
-'''
-
+```
 # Sample Usage: #
-'''
+```
 import numpy as np
 import polyclip
 
@@ -36,4 +35,4 @@ y = np.zeros(nx,np.int32)
 
 polyclip.polyclip_multi4(l,r,b,t, np.ravel(px), np.ravel(py) , npol-1, polyinds, x, y, nclip_poly, areas, index)
 
-'''
+```
