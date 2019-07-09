@@ -1,4 +1,4 @@
-%module polyclip
+%module polyclipNP
 
 %{
 #define SWIG_FILE_WITH_INIT
