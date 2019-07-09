@@ -9,7 +9,7 @@ python setup.py install
 # Sample Usage: #
 ```
 import numpy as np
-import polyclip
+import polyclipNP
 
 # Input polygon indices
 px=np.array([[3.4,3.4,4.5,4.5],[3.5,3.5,5.5,5.5]]).astype(np.float32)
@@ -36,6 +36,6 @@ x = np.zeros(nx,np.int32) # Output pixel x coordinates
 y = np.zeros(nx,np.int32) # Output pixel y coordinates
 areas = np.zeros(nx,np.float32) # Output areas
 
-polyclip.polyclip_multi4(l,r,b,t, np.ravel(px), np.ravel(py) , npol-1, polyinds, x, y, nclip_poly, areas, index)
+polyclipNP.polyclip_multi4(l,r,b,t, np.ravel(px), np.ravel(py) , npol-1, polyinds, x, y, nclip_poly, areas, index)
 
 ```
