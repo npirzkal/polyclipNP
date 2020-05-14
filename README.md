@@ -4,6 +4,10 @@ This is a small SWIG wrapper around the function polyclip_multi4() of J.D. Smith
 
 # Installing: #
 ```
+pip install polyclipNP
+```
+or clone github depo and
+```
 python setup.py install
 ```
 # Sample Usage: #
