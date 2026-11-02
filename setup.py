@@ -13,7 +13,7 @@ example_module = Extension(
 
 setup(
     name='polyclipNP', 
-    version='0.7',
+    version='0.71',
     author="N. Pirzkal",
     description="""Swig wrapper of polyclip.c from J.D. Smith""",
     include_dirs=[np.get_include()], 
