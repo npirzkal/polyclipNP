@@ -8,7 +8,7 @@ pip install polyclipNP
 ```
 or clone github depo and
 ```
-python setup.py install
+python -m pip install .  --no-build-isolation
 ```
 # Sample Usage: #
 ```
