@@ -8,6 +8,7 @@ import numpy as np
 example_module = Extension(
     '_polyclipNP',
     sources=['polyclipNP_c_wrap.c', 'polyclipNP_c.c'],
+    include_dirs=["."], 
 )
 
 setup(
